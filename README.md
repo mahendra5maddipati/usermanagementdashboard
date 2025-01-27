@@ -99,10 +99,6 @@ Contributions are welcome! Here's how you can help:
 4. Push to the branch: `git push origin feature-name`.
 5. Submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ## Contact
 
 For any questions or support, feel free to reach out:
