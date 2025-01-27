@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API_BASE_URL = "https://jsonplaceholder.typicode.com/users";
+const API_BASE_URL = 'https://jsonplaceholder.typicode.com/users';
 
 //function to fetch users from the API
 export const fetchUsers = async () => {

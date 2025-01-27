@@ -5,12 +5,12 @@ class UserForm extends Component {
     id: "",
     name: "",
     email: "",
-    department: "",
+    website: "",
   };
 
   componentDidUpdate(prevProps) {
     if (prevProps.currentUser !== this.props.currentUser) {
-      this.setState(this.props.currentUser || { id: "", name: "", email: "", department: "" });
+      this.setState(this.props.currentUser || { id: "", name: "", email: "", website: "" });
     }
   }
 
@@ -20,8 +20,8 @@ class UserForm extends Component {
 
   handleSubmit = (err) => {
     err.preventDefault();
-    const { id, name, email, department } = this.state;
-    const user = { id, name, email, department };
+    const { id, name, email, website } = this.state;
+    const user = { id, name, email, website };
 
     if (this.props.currentUser) {
       this.props.whenEditUser(id, user);
@@ -29,18 +29,18 @@ class UserForm extends Component {
       this.props.whenAddUser(user);
     }
 
-    this.setState({ id: "", name: "", email: "", department: "" });
+    this.setState({ id: "", name: "", email: "", website: "" });
   };
 
   render() {
-    const { id, name, email, department } = this.state;
+    const { id, name, email, website } = this.state;
 
     return (
       <form onSubmit={this.handleSubmit}>
         <input name="id" value={id} onChange={this.handleChange} placeholder="ID" required />
         <input name="name" value={name} onChange={this.handleChange} placeholder="Name" required />
         <input name="email" value={email} onChange={this.handleChange} placeholder="Email" required />
-        <input name="department" value={department} onChange={this.handleChange} placeholder="Department" required />
+        <input name="website" value={website} onChange={this.handleChange} placeholder="website" required />
         <button type="submit">{this.props.currentUser ? "Update User" : "Add User"}</button>
       </form>
     );

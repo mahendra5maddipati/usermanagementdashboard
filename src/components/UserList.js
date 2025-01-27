@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const UserList = ({ users, whenEdit, whenDelete }) => {
   return (
@@ -8,7 +8,7 @@ const UserList = ({ users, whenEdit, whenDelete }) => {
           <th>ID</th>
           <th>Name</th>
           <th>Email</th>
-          <th>Department</th>
+          <th>Website</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -18,7 +18,7 @@ const UserList = ({ users, whenEdit, whenDelete }) => {
             <td>{user.id}</td>
             <td>{user.name}</td>
             <td>{user.email}</td>
-            <td>{user.department}</td>
+            <td>{user.Website}</td>
             <td>
               <button onClick={() => whenEdit(user)}>Edit</button>
               <button onClick={() => whenDelete(user.id)}>Delete</button>
