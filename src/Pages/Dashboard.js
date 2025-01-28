@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import UserList from "../components/UserList";
-import UserForm from "../components/UserForm";
-import ErrorBoundary from "../components/ErrorBoundary";
-import { fetchUsers, addUser, updateUser, deleteUser } from "../api/api";
+import React, { Component } from 'react';
+import UserList from '../components/UserList';
+import UserForm from '../components/UserForm';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { fetchUsers, addUser, updateUser, deleteUser } from '../api/api';
 
 class Dashboard extends Component {
   state = {
