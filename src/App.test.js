@@ -28,14 +28,14 @@ describe('User Management Dashboard', () => {
     const submitButton = screen.getByText('Add User');
 
     // Simulate user input
-    userEvent.type(nameInput, 'John Doe');
-    userEvent.type(emailInput, 'john@example.com');
-    userEvent.type(websiteInput, 'www.example.com');
+    userEvent.type(nameInput, 'mahendra maddipati');
+    userEvent.type(emailInput, 'mahendra5maddipati@gmail.com');
+    userEvent.type(websiteInput, 'www.needtocreate.com');
     fireEvent.click(submitButton);
 
     // Wait for the new user to be added and check if it is rendered
     await waitFor(() => {
-      expect(screen.getByText('John Doe')).toBeInTheDocument();
+      expect(screen.getByText('mahendra maddipati')).toBeInTheDocument();
     });
   });
 
@@ -47,14 +47,14 @@ describe('User Management Dashboard', () => {
 
     const nameInput = screen.getByPlaceholderText('Name');
     userEvent.clear(nameInput);
-    userEvent.type(nameInput, 'Jane Doe');
+    userEvent.type(nameInput, 'mahendra maddipati');
 
     const updateButton = screen.getByText('Update User');
     fireEvent.click(updateButton);
 
     // Wait for the user to be updated and check if the changes are rendered
     await waitFor(() => {
-      expect(screen.getByText('Jane Doe')).toBeInTheDocument();
+      expect(screen.getByText('mahendra maddipati')).toBeInTheDocument();
     });
   });
 
@@ -62,7 +62,7 @@ describe('User Management Dashboard', () => {
   test('deletes a user', async () => {
     render(<App />);
     const deleteButton = screen.getAllByText('Delete')[0];
-    const userName = screen.getByText('Jane Doe');
+    const userName = screen.getByText('mahendra maddipati');
 
     fireEvent.click(deleteButton);
 
